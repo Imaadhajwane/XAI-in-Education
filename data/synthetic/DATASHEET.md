@@ -11,4 +11,4 @@ data or used to report model performance.
 * Privacy: exact copies of real records = 0.00%;
   median Gower distance to closest real record = 0.1003
 * Recommended citation text: "A synthetic version of the dataset, generated with Gaussian Copula
-  (Patki et al., 2016) and audited for fidelity and privacy, is available at <repository URL>."
+  (Patki et al., 2016) and audited for fidelity and privacy, is available at https://github.com/Imaadhajwane/XAI-in-Education (doi:10.5281/zenodo.23185848)."
