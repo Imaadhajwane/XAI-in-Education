@@ -1,0 +1,4 @@
+Class,Pre-SMOTE count,Pre-SMOTE (%),Post-SMOTE count,Post-SMOTE (%)
+At-Risk (1),46,5.4,799,50.0
+Not At-Risk (0),799,94.6,799,50.0
+Total,845,100.0,1598,100.0

@@ -1,0 +1,12 @@
+**Calibration of out-of-fold predicted probabilities (nested repeated CV, n = 1,208).**
+
+| Model               |   Brier |   Brier skill score |   ECE (10 quantile bins) |   Calibration intercept (ideal 0) |   Calibration slope (ideal 1) |   Mean predicted |   Observed prevalence |
+|:--------------------|--------:|--------------------:|-------------------------:|----------------------------------:|------------------------------:|-----------------:|----------------------:|
+| Logistic Regression |  0.0289 |               0.441 |                   0.0064 |                            -0.012 |                         0.909 |           0.055  |                0.0546 |
+| SVM                 |  0.0299 |               0.42  |                   0.0038 |                            -0.024 |                         1.067 |           0.0554 |                0.0546 |
+| Random Forest       |  0.0386 |               0.252 |                   0.024  |                             0.01  |                         2.026 |           0.0542 |                0.0546 |
+| Decision Tree       |  0.0374 |               0.276 |                   0.0108 |                             0.099 |                         0.638 |           0.0512 |                0.0546 |
+| Gradient Boosting   |  0.0338 |               0.346 |                   0.0106 |                             0.129 |                         1.021 |           0.0506 |                0.0546 |
+| XGBoost             |  0.0316 |               0.389 |                   0.0107 |                             0.345 |                         0.882 |           0.0457 |                0.0546 |
+
+*Note.* Slope < 1 indicates over-confident (too extreme) probabilities; intercept ≠ 0 indicates systematic over/under-estimation (calibration-in-the-large).

@@ -1,0 +1,10 @@
+**Theoretical grounding of the PREX-Edu pedagogical dimensions.**
+
+| PREX-Edu dimension   | Engagement–disaffection construct                   | Source features                        |   |p_k| | Typical intervention                                                        |
+|:---------------------|:----------------------------------------------------|:---------------------------------------|--------:|:----------------------------------------------------------------------------|
+| Engagement           | Behavioural engagement (effort, persistence)        | Study hours / week, Motivation (1–5)   |       2 | structured study plan / mentoring to raise weekly study time and motivation |
+| Lifestyle            | Contextual antecedent (self-regulation of routines) | Sleep hours / night, Screen time / day |       2 | sleep-hygiene and screen-time counselling with the family                   |
+| Cognitive Load       | Emotional engagement / disaffection (Pekrun, 2006)  | Stress (1–5)                           |       1 | counsellor referral for stress management; review of workload               |
+| Participation        | Behavioural engagement (presence)                   | High attendance                        |       1 | attendance monitoring and follow-up with parents / class teacher            |
+
+*Note.* Socio-demographic features (age, gender, parent education, income, study space, extracurricular, difficult subject) are retained in the model but form a separate, non-actionable context block.

@@ -1,0 +1,16 @@
+**Friedman test with Nemenyi post-hoc over 100 outer folds.**
+
+| Metric                  |   Rank | Model               |   Mean rank |   Friedman χ² |        p |   CD (α=.05) |
+|:------------------------|-------:|:--------------------|------------:|--------------:|---------:|-------------:|
+| ROC-AUC                 |      1 | Logistic Regression |       1.735 |        308.16 | 1.76e-64 |        0.754 |
+| ROC-AUC                 |      2 | SVM                 |       2.53  |               |          |              |
+| ROC-AUC                 |      3 | XGBoost             |       2.92  |               |          |              |
+| ROC-AUC                 |      4 | Gradient Boosting   |       3.66  |               |          |              |
+| ROC-AUC                 |      5 | Random Forest       |       4.27  |               |          |              |
+| ROC-AUC                 |      6 | Decision Tree       |       5.885 |               |          |              |
+| PR-AUC (Avg. precision) |      1 | Logistic Regression |       1.84  |        262.09 | 1.4e-54  |        0.754 |
+| PR-AUC (Avg. precision) |      2 | SVM                 |       2.64  |               |          |              |
+| PR-AUC (Avg. precision) |      3 | XGBoost             |       2.95  |               |          |              |
+| PR-AUC (Avg. precision) |      4 | Gradient Boosting   |       3.78  |               |          |              |
+| PR-AUC (Avg. precision) |      5 | Random Forest       |       4.06  |               |          |              |
+| PR-AUC (Avg. precision) |      6 | Decision Tree       |       5.73  |               |          |              |

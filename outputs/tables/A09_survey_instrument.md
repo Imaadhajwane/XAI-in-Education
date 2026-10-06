@@ -1,0 +1,11 @@
+**Educator survey instrument (administered per profile and format).**
+
+|   # | Item                                                                                   | Construct             | Scale                                      |
+|----:|:---------------------------------------------------------------------------------------|:----------------------|:-------------------------------------------|
+|   1 | This explanation is easy to understand without technical training.                     | Clarity               | 1 (Strongly disagree) – 5 (Strongly agree) |
+|   2 | This explanation suggests a clear next step for intervention.                          | Actionability         | 1–5                                        |
+|   3 | I would be comfortable using this explanation to inform a decision about this student. | Trust                 | 1–5                                        |
+|   4 | This explanation matches how I naturally think about student risk.                     | Pedagogical alignment | 1–5                                        |
+|   5 | Which single factor do you consider most influential in this prediction?               | Factor identification | Free text / category                       |
+
+*Note.* Blinded within-subjects design: each educator rates every profile in both formats (raw SHAP, PREX-Edu) in a randomised order; consent obtained; responses anonymous.

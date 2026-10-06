@@ -1,0 +1,15 @@
+\begin{table}
+\small[htbp]
+\caption{Empirical comparison of SHAP-to-dimension aggregation operators against three model-based ground truths.}
+\label{tab:S24_aggregation_operators}
+\begin{tabular}{lrlrlrlr}
+\toprule
+Operator & Students & Top-1 = exact group-Shapley & Mean τ vs exact group-Shapley & Top-1 = dimension ablation & Mean τ vs dimension ablation & Top-1 = equal-budget intervention & Mean τ vs equal-budget intervention \\
+\midrule
+mean|φ| (cardinality-normalised) & 21 & 71.4\% & 0.762000 & 71.4\% & 0.667000 & 61.9\% & 0.635000 \\
+sum|φ| (PREX-Edu) & 21 & 100.0\% & 0.873000 & 100.0\% & 0.810000 & 81.0\% & 0.683000 \\
+|Σφ| (group SHAP) & 21 & 100.0\% & 0.905000 & 100.0\% & 0.810000 & 81.0\% & 0.683000 \\
+RMS(φ) & 21 & 76.2\% & 0.794000 & 76.2\% & 0.698000 & 57.1\% & 0.635000 \\
+\bottomrule
+\end{tabular}
+\end{table}

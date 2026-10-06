@@ -1,0 +1,17 @@
+\begin{table}
+\small[htbp]
+\caption{Demographic parity of At-Risk predictions by gender and family income (hold-out test set).}
+\label{tab:T13_demographic_parity}
+\begin{tabular}{llrrrrlll}
+\toprule
+Attribute & Subgroup & N (test) & N At-Risk (true) & Base rate & P(ŷ=1 | group) & Parity diff. vs reference & Disparate-impact ratio & TPR (recall) in group \\
+\midrule
+Gender & Female & 192 & 14 & 0.072900 & 0.072900 & — (reference) & — & 0.714000 \\
+Gender & Male & 156 & 6 & 0.038500 & 0.038500 & -0.034500 & 0.527000 & 0.667000 \\
+Gender & Prefer not to say & 15 & 0 & 0.000000 & 0.066700 & -0.006300 & 0.914000 & n/a \\
+Income range & High & 70 & 4 & 0.057100 & 0.057100 & — (reference) & — & 0.500000 \\
+Income range & Medium & 203 & 10 & 0.049300 & 0.049300 & -0.007900 & 0.862000 & 0.700000 \\
+Income range & Low & 90 & 6 & 0.066700 & 0.077800 & 0.020600 & 1.361000 & 0.833000 \\
+\bottomrule
+\end{tabular}
+\end{table}

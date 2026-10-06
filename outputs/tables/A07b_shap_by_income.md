@@ -1,0 +1,10 @@
+**Mean absolute SHAP value of the six most important features by income range.**
+
+| Income range     |   Motivation (1–5) |   Study hours / week |   Stress (1–5) |   Sleep hours / night |   Screen time / day |   Difficult subject |
+|:-----------------|-------------------:|---------------------:|---------------:|----------------------:|--------------------:|--------------------:|
+| High             |              2.212 |                1.822 |          1.494 |                 0.93  |               0.615 |               0.498 |
+| Medium           |              2.254 |                1.732 |          1.502 |                 1.069 |               0.525 |               0.411 |
+| Low              |              2.269 |                1.743 |          1.472 |                 0.954 |               0.637 |               0.468 |
+| Kruskal–Wallis p |              0.963 |                0.877 |          0.979 |                 0.253 |               0.08  |               0.28  |
+
+*Note.* Last row: Kruskal–Wallis test of equal |SHAP| distributions across subgroups (no multiplicity correction).

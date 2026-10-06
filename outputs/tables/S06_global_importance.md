@@ -1,0 +1,19 @@
+**Global feature importance of the final model: mean |SHAP|, permutation importance and standardised coefficients.**
+
+| Feature             |   Mean |SHAP| |   SHAP rank |   PFI (ΔROC-AUC) |   PFI SD |   PFI rank |   |Std. coef.| |   Coef rank | Odds ratio (+1 SD; per level for nominal)   |
+|:--------------------|--------------:|------------:|-----------------:|---------:|-----------:|---------------:|------------:|:--------------------------------------------|
+| Motivation (1–5)    |        2.2496 |           1 |           0.1174 |   0.0302 |          2 |         2.4408 |           1 | 0.087                                       |
+| Study hours / week  |        1.7519 |           2 |           0.1348 |   0.0312 |          1 |         2.105  |           2 | 0.122                                       |
+| Stress (1–5)        |        1.4932 |           3 |           0.0624 |   0.0149 |          3 |         1.753  |           3 | 5.772                                       |
+| Sleep hours / night |        1.0134 |           4 |           0.023  |   0.0067 |          4 |         1.2115 |           4 | 0.298                                       |
+| Screen time / day   |        0.5703 |           5 |           0.003  |   0.0035 |          6 |         0.6703 |           6 | 1.955                                       |
+| Difficult subject   |        0.442  |           6 |          -0.002  |   0.0027 |         13 |         0.4937 |           8 | [0.835, 1.633, 1.461, 1.064, 3.591, 5.207]  |
+| High attendance     |        0.4318 |           7 |           0.0081 |   0.0031 |          5 |         0.7122 |           5 | 0.491                                       |
+| Income range        |        0.2304 |           8 |           0.0004 |   0.0017 |          9 |         0.3444 |           9 | 0.709                                       |
+| Gender              |        0.2186 |           9 |          -0.0012 |   0.0012 |         12 |         0.5042 |           7 | [1.633, 2.196, 11.055]                      |
+| Study space         |        0.1614 |          10 |           0.0008 |   0.0008 |          7 |         0.1765 |          10 | 1.193                                       |
+| Age                 |        0.1063 |          11 |           0.0004 |   0.001  |          8 |         0.1323 |          11 | 1.141                                       |
+| Extracurricular     |        0.022  |          12 |           0      |   0.0002 |         10 |         0.023  |          12 | 1.023                                       |
+| Parent education    |        0.0174 |          13 |          -0.0001 |   0.0002 |         11 |         0.0207 |          13 | 0.979                                       |
+
+*Note.* Spearman ρ(SHAP, PFI) = 0.747; ρ(SHAP, |std. coef|) = 0.962. PFI: mean drop in test ROC-AUC over permutations. Odds ratios: per +1 SD increase (binary/ordinal features: per SD of their code); nominal features: one OR per one-hot level vs. the intercept.

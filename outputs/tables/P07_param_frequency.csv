@@ -1,0 +1,18 @@
+Model,Selected hyper-parameters,Outer folds,Share of outer folds (%)
+Decision Tree,"{'clf__max_depth': 7, 'clf__min_samples_leaf': 10}",32,32.0
+Decision Tree,"{'clf__max_depth': 5, 'clf__min_samples_leaf': 5}",22,22.0
+Decision Tree,"{'clf__max_depth': 5, 'clf__min_samples_leaf': 10}",16,16.0
+Gradient Boosting,"{'clf__learning_rate': 0.05, 'clf__max_depth': 2, 'clf__n_estimators': 200}",38,38.0
+Gradient Boosting,"{'clf__learning_rate': 0.1, 'clf__max_depth': 2, 'clf__n_estimators': 100}",30,30.0
+Gradient Boosting,"{'clf__learning_rate': 0.05, 'clf__max_depth': 3, 'clf__n_estimators': 200}",9,9.0
+Logistic Regression,{'clf__C': 100},83,83.0
+Logistic Regression,{'clf__C': 10},17,17.0
+Random Forest,"{'clf__max_depth': None, 'clf__min_samples_leaf': 5}",36,36.0
+Random Forest,"{'clf__max_depth': 10, 'clf__min_samples_leaf': 5}",35,35.0
+Random Forest,"{'clf__max_depth': 10, 'clf__min_samples_leaf': 1}",15,15.0
+SVM,"{'clf__C': 10, 'clf__gamma': 0.01}",44,44.0
+SVM,"{'clf__C': 1, 'clf__gamma': 0.01}",28,28.0
+SVM,"{'clf__C': 0.1, 'clf__gamma': 0.01}",27,27.0
+XGBoost,"{'clf__learning_rate': 0.05, 'clf__max_depth': 3}",43,43.0
+XGBoost,"{'clf__learning_rate': 0.1, 'clf__max_depth': 3}",23,23.0
+XGBoost,"{'clf__learning_rate': 0.05, 'clf__max_depth': 5}",19,19.0

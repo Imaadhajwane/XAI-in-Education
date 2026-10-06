@@ -1,0 +1,17 @@
+\begin{table}
+\small[htbp]
+\caption{Hyper-parameters selected by stratified 10-fold GridSearchCV on the training partition.}
+\label{tab:S04_hyperparameters}
+\begin{tabular}{llr}
+\toprule
+Model & Selected hyper-parameters & Inner-CV average\_precision \\
+\midrule
+Logistic Regression & C=100 & 0.652700 \\
+SVM & C=0.1, gamma=0.01 & 0.585500 \\
+Random Forest & max\_depth=None, min\_samples\_leaf=5 & 0.535800 \\
+Decision Tree & max\_depth=7, min\_samples\_leaf=10 & 0.220500 \\
+Gradient Boosting & learning\_rate=0.05, max\_depth=2, n\_estimators=200 & 0.563300 \\
+XGBoost & learning\_rate=0.1, max\_depth=5 & 0.612700 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,10 @@
+**Nemenyi post-hoc p-values (ROC-AUC).**
+
+| model               |   Logistic Regression |    SVM |   Random Forest |   Decision Tree |   Gradient Boosting |   XGBoost |
+|:--------------------|----------------------:|-------:|----------------:|----------------:|--------------------:|----------:|
+| Logistic Regression |                1      | 0.0318 |          0      |               0 |              0      |    0.0001 |
+| SVM                 |                0.0318 | 1      |          0      |               0 |              0.0003 |    0.6809 |
+| Random Forest       |                0      | 0      |          1      |               0 |              0.1916 |    0      |
+| Decision Tree       |                0      | 0      |          0      |               1 |              0      |    0      |
+| Gradient Boosting   |                0      | 0.0003 |          0.1916 |               0 |              1      |    0.0579 |
+| XGBoost             |                0.0001 | 0.6809 |          0      |               0 |              0.0579 |    1      |

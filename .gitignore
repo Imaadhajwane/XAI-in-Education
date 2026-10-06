@@ -1,0 +1,33 @@
+# ---- Real student data: never commit ----------------------------------
+data/raw/
+data/processed/
+outputs/models/
+outputs/educator_study_materials/
+data/educator_pilot/*.csv
+# per-student result tables (individual-level records of real students)
+outputs/tables/A05_shap_lime_instances.*
+outputs/tables/A08_per_student_prex.*
+outputs/tables/S12_intervention_per_student.*
+outputs/tables/S14_counterfactual_examples.*
+outputs/tables/_holdout_predictions.csv
+outputs/tables/prex_explanations_examples.md
+!data/educator_pilot/ratings_TEMPLATE.csv
+
+# ---- Internal / large -------------------------------------------------
+docs/
+paper/
+outputs/logs/
+outputs/PREX-Edu_results_compendium.docx
+*.joblib
+*.pkl
+
+# ---- Python / OS ------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*

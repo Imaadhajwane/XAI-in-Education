@@ -1,0 +1,17 @@
+\begin{table}
+\small[htbp]
+\caption{Calibration of out-of-fold predicted probabilities (nested repeated CV, n = 1,208).}
+\label{tab:S20_calibration}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Model & Brier & Brier skill score & ECE (10 quantile bins) & Calibration intercept (ideal 0) & Calibration slope (ideal 1) & Mean predicted & Observed prevalence \\
+\midrule
+Logistic Regression & 0.028900 & 0.441000 & 0.006400 & -0.012000 & 0.909000 & 0.055000 & 0.054600 \\
+SVM & 0.029900 & 0.420000 & 0.003800 & -0.024000 & 1.067000 & 0.055400 & 0.054600 \\
+Random Forest & 0.038600 & 0.252000 & 0.024000 & 0.010000 & 2.026000 & 0.054200 & 0.054600 \\
+Decision Tree & 0.037400 & 0.276000 & 0.010800 & 0.099000 & 0.638000 & 0.051200 & 0.054600 \\
+Gradient Boosting & 0.033800 & 0.346000 & 0.010600 & 0.129000 & 1.021000 & 0.050600 & 0.054600 \\
+XGBoost & 0.031600 & 0.389000 & 0.010700 & 0.345000 & 0.882000 & 0.045700 & 0.054600 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,5 @@
+Operator,Students,Top-1 = exact group-Shapley,Mean τ vs exact group-Shapley,Top-1 = dimension ablation,Mean τ vs dimension ablation,Top-1 = equal-budget intervention,Mean τ vs equal-budget intervention
+mean|φ| (cardinality-normalised),21,71.4%,0.762,71.4%,0.667,61.9%,0.635
+sum|φ| (PREX-Edu),21,100.0%,0.873,100.0%,0.81,81.0%,0.683
+|Σφ| (group SHAP),21,100.0%,0.905,100.0%,0.81,81.0%,0.683
+RMS(φ),21,76.2%,0.794,76.2%,0.698,57.1%,0.635

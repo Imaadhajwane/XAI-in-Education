@@ -1,0 +1,12 @@
+**Power of candidate replication designs when ratings are clustered within raters (ICC = 0.2).**
+
+|   Raters |   Profiles |   Pairs |   Design effect (ICC = 0.2) |   Effective N |   Power d_z = 0.4 |   Power d_z = 0.5 |
+|---------:|-----------:|--------:|----------------------------:|--------------:|------------------:|------------------:|
+|        3 |          5 |      15 |                         1.8 |           8.3 |            0.3135 |            0.4055 |
+|        8 |         10 |      80 |                         2.8 |          28.6 |            0.7935 |            0.906  |
+|       10 |         10 |     100 |                         2.8 |          35.7 |            0.845  |            0.9335 |
+|       12 |         12 |     144 |                         3.2 |          45   |            0.919  |            0.981  |
+|       15 |         12 |     180 |                         3.2 |          56.2 |            0.965  |            0.993  |
+|       20 |         12 |     240 |                         3.2 |          75   |            0.9815 |            0.9965 |
+
+*Note.* A 3 × 5 design has ≈ 41% power for a medium effect (d_z = 0.5); ≥ 10 raters × 10 profiles gives ≥ 80% power for d_z = 0.4.

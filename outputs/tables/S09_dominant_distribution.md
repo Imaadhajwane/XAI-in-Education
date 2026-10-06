@@ -1,0 +1,9 @@
+**Distribution of the dominant PREX-Edu dimension and attribution coverage.**
+
+| Group                           |   n |   Engagement dominant (%) |   Lifestyle dominant (%) |   Cognitive Load dominant (%) |   Participation dominant (%) |   Median margin |   4-dimension |SHAP| coverage (median %) |
+|:--------------------------------|----:|--------------------------:|-------------------------:|------------------------------:|-----------------------------:|----------------:|-----------------------------------------:|
+| All test students               | 363 |                      78.8 |                     11.3 |                           9.6 |                          0.3 |           1.851 |                                     86.9 |
+| Flagged At-Risk (p ≥ threshold) |  21 |                     100   |                      0   |                           0   |                          0   |           3.668 |                                     90.5 |
+| True At-Risk                    |  20 |                     100   |                      0   |                           0   |                          0   |           2.262 |                                     89.9 |
+
+*Note.* Coverage = share of a student's total |SHAP| captured by the four actionable dimensions; the remainder belongs to non-actionable context features.

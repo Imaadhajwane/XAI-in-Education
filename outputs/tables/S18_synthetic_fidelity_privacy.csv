@@ -1,0 +1,5 @@
+Generator,Synthetic rows,Synthetic At-Risk (%),SDMetrics column shapes,SDMetrics pair trends,SDMetrics overall,Mean |Δ Spearman ρ|,Discriminator AUC (↓0.5),Exact copies of real rows (%),Median DCR,DCR < 5th pct of real hold-out (%),TSTR ROC-AUC (real test)
+Gaussian Copula,845,5.4,0.97,0.89,0.93,0.037,0.528,0.0,0.1118,4.0,0.9618
+TVAE,845,5.4,0.764,0.508,0.636,0.117,0.979,0.0,0.0544,34.2,0.8264
+CTGAN,845,5.4,0.895,0.813,0.854,0.051,0.839,0.0,0.1213,1.4,0.8994
+SMOTE-NC,184,100.0,0.808,0.615,0.711,0.13,0.797,0.0,0.0712,26.1,

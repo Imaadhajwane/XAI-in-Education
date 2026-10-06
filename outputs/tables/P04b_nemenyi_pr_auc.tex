@@ -1,0 +1,17 @@
+\begin{table}
+\small[htbp]
+\caption{Nemenyi post-hoc p-values (PR-AUC (Avg. precision)).}
+\label{tab:P04b_nemenyi_pr_auc}
+\begin{tabular}{lrrrrrr}
+\toprule
+model & Logistic Regression & SVM & Random Forest & Decision Tree & Gradient Boosting & XGBoost \\
+\midrule
+Logistic Regression & 1.000000 & 0.030000 & 0.000000 & 0.000000 & 0.000000 & 0.000400 \\
+SVM & 0.030000 & 1.000000 & 0.000000 & 0.000000 & 0.000200 & 0.850500 \\
+Random Forest & 0.000000 & 0.000000 & 1.000000 & 0.000000 & 0.897800 & 0.000400 \\
+Decision Tree & 0.000000 & 0.000000 & 0.000000 & 1.000000 & 0.000000 & 0.000000 \\
+Gradient Boosting & 0.000000 & 0.000200 & 0.897800 & 0.000000 & 1.000000 & 0.021100 \\
+XGBoost & 0.000400 & 0.850500 & 0.000400 & 0.000000 & 0.021100 & 1.000000 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,7 @@
+**Class distribution of the binary target (At-Risk = LastTermPercentage ≤ 50%).**
+
+| Class       |   Label |   Count | Percentage   |
+|:------------|--------:|--------:|:-------------|
+| At-Risk     |       1 |      66 | 5.46%        |
+| Not At-Risk |       0 |    1142 | 94.54%       |
+| Total       |         |    1208 | 100.00%      |

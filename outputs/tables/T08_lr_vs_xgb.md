@@ -1,0 +1,10 @@
+**Logistic Regression vs XGBoost on 10-fold CV scores: Welch's t-test and the Nadeau–Bengio corrected resampled t-test.**
+
+| Metric                  | LR mean ± SD    | XGB mean ± SD   |   Welch t |   Welch df |   Welch p |   Corrected t (Nadeau–Bengio) |   Corrected p |   Cohen's d | Significant (corrected, α=.05)   |
+|:------------------------|:----------------|:----------------|----------:|-----------:|----------:|------------------------------:|--------------:|------------:|:---------------------------------|
+| Accuracy                | 0.9539 ± 0.0275 | 0.9574 ± 0.0186 |    -0.338 |      15.8  |    0.7401 |                        -0.396 |        0.7014 |      -0.151 | No                               |
+| ROC-AUC                 | 0.9562 ± 0.0326 | 0.9347 ± 0.0538 |     1.079 |      14.82 |    0.2978 |                         1.42  |        0.1894 |       0.483 | No                               |
+| PR-AUC (Avg. precision) | 0.6527 ± 0.2556 | 0.6127 ± 0.2348 |     0.364 |      17.87 |    0.7199 |                         0.586 |        0.5721 |       0.163 | No                               |
+| F1 (At-Risk)            | 0.4940 ± 0.3162 | 0.4636 ± 0.2549 |     0.237 |      17.22 |    0.8153 |                         0.282 |        0.7841 |       0.106 | No                               |
+
+*Note.* CV folds share training data, so Welch's t-test (which assumes independence) is anti-conservative; the corrected resampled t-test should be used for inference.

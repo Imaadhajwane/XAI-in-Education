@@ -1,0 +1,19 @@
+**Variance inflation factors of the 13 predictors.**
+
+| Feature             |   VIF |
+|:--------------------|------:|
+| Age                 | 1.357 |
+| Gender              | 1.01  |
+| Parent education    | 1.008 |
+| Income range        | 1.081 |
+| Study space         | 1.083 |
+| Study hours / week  | 1.349 |
+| Sleep hours / night | 1.013 |
+| Screen time / day   | 1.005 |
+| Motivation (1–5)    | 1.009 |
+| Stress (1–5)        | 1.019 |
+| Extracurricular     | 1.008 |
+| High attendance     | 1.017 |
+| Difficult subject   | 1.004 |
+
+*Note.* All VIF < 5 indicates no problematic multicollinearity.

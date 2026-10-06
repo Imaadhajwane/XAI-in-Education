@@ -1,0 +1,4 @@
+Removal order,Students,AOPC@6 mean,AOPC@6 SD,Mean prob. after 1 removal,Mean prob. after 3 removals
+PREX-Edu,21,0.6075,0.1903,0.0704,0.0021
+SHAP,21,0.6092,0.1899,0.0704,0.0022
+Random,21,0.3187,0.1125,0.4997,0.327

@@ -1,0 +1,17 @@
+\begin{table}
+\small[htbp]
+\caption{Reliability of the six classifiers: Cohen's κ, MCC and Brier score on the held-out test set.}
+\label{tab:T09_kappa_brier}
+\begin{tabular}{lrrrlrrr}
+\toprule
+Model & Accuracy (CV mean) & Accuracy (test) & Cohen's κ (test) & Agreement level & MCC (test) & Brier score (test) & Brier skill score \\
+\midrule
+Logistic Regression & 0.953900 & 0.969700 & 0.651500 & Substantial & 0.668200 & 0.021700 & 0.583000 \\
+SVM & 0.950300 & 0.961400 & 0.515500 & Moderate & 0.549500 & 0.026500 & 0.491200 \\
+Random Forest & 0.945600 & 0.944900 & 0.000000 & Slight & 0.000000 & 0.037000 & 0.289800 \\
+Decision Tree & 0.926600 & 0.955900 & 0.507000 & Moderate & 0.515900 & 0.036100 & 0.307500 \\
+Gradient Boosting & 0.949100 & 0.958700 & 0.524800 & Moderate & 0.538200 & 0.027500 & 0.471900 \\
+XGBoost & 0.957400 & 0.953200 & 0.490200 & Moderate & 0.495800 & 0.033000 & 0.366500 \\
+\bottomrule
+\end{tabular}
+\end{table}

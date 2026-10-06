@@ -1,0 +1,7 @@
+Rank,Model,Mean rank,Friedman χ²,df,p,Nemenyi CD (α=.05)
+1,XGBoost,2.4,17.314,5,3.94e-03,2.384
+2,Logistic Regression,3.0,17.314,5,3.94e-03,2.384
+3,SVM,3.2,17.314,5,3.94e-03,2.384
+4,Gradient Boosting,3.25,17.314,5,3.94e-03,2.384
+5,Random Forest,3.8,17.314,5,3.94e-03,2.384
+6,Decision Tree,5.35,17.314,5,3.94e-03,2.384

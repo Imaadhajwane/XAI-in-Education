@@ -1,0 +1,10 @@
+**Nemenyi post-hoc p-values (fold-wise accuracy).**
+
+| Model               |   Logistic Regression |    SVM |   Random Forest |   Decision Tree |   Gradient Boosting |   XGBoost |
+|:--------------------|----------------------:|-------:|----------------:|----------------:|--------------------:|----------:|
+| Logistic Regression |                1      | 0.9999 |          0.9316 |          0.0561 |              0.9997 |    0.9799 |
+| SVM                 |                0.9999 | 1      |          0.9799 |          0.1048 |              1      |    0.9316 |
+| Random Forest       |                0.9316 | 0.9799 |          1      |          0.4318 |              0.9864 |    0.5495 |
+| Decision Tree       |                0.0561 | 0.1048 |          0.4318 |          1      |              0.1211 |    0.0056 |
+| Gradient Boosting   |                0.9997 | 1      |          0.9864 |          0.1211 |              1      |    0.9128 |
+| XGBoost             |                0.9799 | 0.9316 |          0.5495 |          0.0056 |              0.9128 |    1      |

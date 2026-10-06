@@ -1,0 +1,24 @@
+\begin{table}
+\small[htbp]
+\caption{Global feature importance of the final model: mean |SHAP|, permutation importance and standardised coefficients.}
+\label{tab:S06_global_importance}
+\begin{tabular}{lrrrrrrrl}
+\toprule
+Feature & Mean |SHAP| & SHAP rank & PFI (ΔROC-AUC) & PFI SD & PFI rank & |Std. coef.| & Coef rank & Odds ratio (+1 SD; per level for nominal) \\
+\midrule
+Motivation (1–5) & 2.249600 & 1 & 0.117400 & 0.030200 & 2 & 2.440800 & 1 & 0.087 \\
+Study hours / week & 1.751900 & 2 & 0.134800 & 0.031200 & 1 & 2.105000 & 2 & 0.122 \\
+Stress (1–5) & 1.493200 & 3 & 0.062400 & 0.014900 & 3 & 1.753000 & 3 & 5.772 \\
+Sleep hours / night & 1.013400 & 4 & 0.023000 & 0.006700 & 4 & 1.211500 & 4 & 0.298 \\
+Screen time / day & 0.570300 & 5 & 0.003000 & 0.003500 & 6 & 0.670300 & 6 & 1.955 \\
+Difficult subject & 0.442000 & 6 & -0.002000 & 0.002700 & 13 & 0.493700 & 8 & [0.835, 1.633, 1.461, 1.064, 3.591, 5.207] \\
+High attendance & 0.431800 & 7 & 0.008100 & 0.003100 & 5 & 0.712200 & 5 & 0.491 \\
+Income range & 0.230400 & 8 & 0.000400 & 0.001700 & 9 & 0.344400 & 9 & 0.709 \\
+Gender & 0.218600 & 9 & -0.001200 & 0.001200 & 12 & 0.504200 & 7 & [1.633, 2.196, 11.055] \\
+Study space & 0.161400 & 10 & 0.000800 & 0.000800 & 7 & 0.176500 & 10 & 1.193 \\
+Age & 0.106300 & 11 & 0.000400 & 0.001000 & 8 & 0.132300 & 11 & 1.141 \\
+Extracurricular & 0.022000 & 12 & 0.000000 & 0.000200 & 10 & 0.023000 & 12 & 1.023 \\
+Parent education & 0.017400 & 13 & -0.000100 & 0.000200 & 11 & 0.020700 & 13 & 0.979 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,26 @@
+\begin{table}
+\small[htbp]
+\caption{Pairwise McNemar tests on hold-out hard predictions.}
+\label{tab:A01_mcnemar}
+\begin{tabular}{llrrllrrl}
+\toprule
+Model A & Model B & b (A✓ B✗) & c (A✗ B✓) & χ² (cc) & Test & p & p (BH-FDR) & Sig. (FDR α=.05) \\
+\midrule
+Logistic Regression & SVM & 5 & 2 &  & exact & 0.453100 & 0.846400 & ✗ \\
+Logistic Regression & Random Forest & 11 & 2 &  & exact & 0.022500 & 0.336900 & ✗ \\
+Logistic Regression & Decision Tree & 9 & 4 &  & exact & 0.266800 & 0.667100 & ✗ \\
+Logistic Regression & Gradient Boosting & 5 & 1 &  & exact & 0.218800 & 0.667100 & ✗ \\
+Logistic Regression & XGBoost & 9 & 3 &  & exact & 0.146000 & 0.667100 & ✗ \\
+SVM & Random Forest & 8 & 2 &  & exact & 0.109400 & 0.667100 & ✗ \\
+SVM & Decision Tree & 7 & 5 &  & exact & 0.774400 & 0.968000 & ✗ \\
+SVM & Gradient Boosting & 4 & 3 &  & exact & 1.000000 & 1.000000 & ✗ \\
+SVM & XGBoost & 6 & 3 &  & exact & 0.507800 & 0.846400 & ✗ \\
+Random Forest & Decision Tree & 5 & 9 &  & exact & 0.424000 & 0.846400 & ✗ \\
+Random Forest & Gradient Boosting & 4 & 9 &  & exact & 0.266800 & 0.667100 & ✗ \\
+Random Forest & XGBoost & 6 & 9 &  & exact & 0.607200 & 0.910900 & ✗ \\
+Decision Tree & Gradient Boosting & 5 & 6 &  & exact & 1.000000 & 1.000000 & ✗ \\
+Decision Tree & XGBoost & 7 & 6 &  & exact & 1.000000 & 1.000000 & ✗ \\
+Gradient Boosting & XGBoost & 5 & 3 &  & exact & 0.726600 & 0.968000 & ✗ \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,6 @@
+Measure,Value
+Students,21
+Valid counterfactuals found,21 (100%)
+Median cost (SD units),0.72
+Median number of features changed,1.0
+Main CF dimension = PREX top dimension,95.2%

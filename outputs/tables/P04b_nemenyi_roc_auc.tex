@@ -1,0 +1,17 @@
+\begin{table}
+\small[htbp]
+\caption{Nemenyi post-hoc p-values (ROC-AUC).}
+\label{tab:P04b_nemenyi_roc_auc}
+\begin{tabular}{lrrrrrr}
+\toprule
+model & Logistic Regression & SVM & Random Forest & Decision Tree & Gradient Boosting & XGBoost \\
+\midrule
+Logistic Regression & 1.000000 & 0.031800 & 0.000000 & 0.000000 & 0.000000 & 0.000100 \\
+SVM & 0.031800 & 1.000000 & 0.000000 & 0.000000 & 0.000300 & 0.680900 \\
+Random Forest & 0.000000 & 0.000000 & 1.000000 & 0.000000 & 0.191600 & 0.000000 \\
+Decision Tree & 0.000000 & 0.000000 & 0.000000 & 1.000000 & 0.000000 & 0.000000 \\
+Gradient Boosting & 0.000000 & 0.000300 & 0.191600 & 0.000000 & 1.000000 & 0.057900 \\
+XGBoost & 0.000100 & 0.680900 & 0.000000 & 0.000000 & 0.057900 & 1.000000 \\
+\bottomrule
+\end{tabular}
+\end{table}

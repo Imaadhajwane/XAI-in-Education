@@ -1,0 +1,11 @@
+**Dimension-level ablation: does the R_k ranking predict the performance cost of removing a dimension?**
+
+| Dimension                |   Features |   Mean R_k |   Mean |SHAP| per feature (Eq. 3 variant) |   ROC-AUC after removal |   ΔROC-AUC |   Rank by R_k |   Rank by ΔAUC |
+|:-------------------------|-----------:|-----------:|------------------------------------------:|------------------------:|-----------:|--------------:|---------------:|
+| Engagement               |          2 |     4.0015 |                                    2.0008 |                  0.784  |     0.1993 |             1 |              1 |
+| Lifestyle                |          2 |     1.5837 |                                    0.7919 |                  0.9714 |     0.0118 |             2 |              3 |
+| Cognitive Load           |          1 |     1.4932 |                                    1.4932 |                  0.9513 |     0.0319 |             3 |              2 |
+| Participation            |          1 |     0.4318 |                                    0.4318 |                  0.9784 |     0.0048 |             5 |              4 |
+| Context (non-actionable) |          7 |     1.1983 |                                    0.1712 |                  0.9864 |    -0.0032 |             4 |              5 |
+
+*Note.* R_k = sum of |SHAP| (operator set in config). Spearman ρ(mean R_k, ΔROC-AUC) = 0.800. Context block shown for completeness.

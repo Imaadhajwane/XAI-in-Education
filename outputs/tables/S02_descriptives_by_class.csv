@@ -1,0 +1,29 @@
+Variable,Level,Not At-Risk (n=1142),At-Risk (n=66),Test,Statistic,p,Effect size
+Age,mean ± SD,15.06 ± 1.67,14.11 ± 1.38,Mann–Whitney U,25093.5,< .001,r_rb = -0.33
+Study hours / week,mean ± SD,11.74 ± 3.73,7.20 ± 3.16,Mann–Whitney U,13624.5,< .001,r_rb = -0.64
+Sleep hours / night,mean ± SD,7.55 ± 1.01,7.05 ± 0.89,Mann–Whitney U,26861.5,< .001,r_rb = -0.29
+Screen time / day,mean ± SD,3.98 ± 1.51,4.54 ± 1.42,Mann–Whitney U,46143.0,0.002,r_rb = 0.22
+Motivation (1–5),mean ± SD,3.17 ± 1.38,1.68 ± 0.83,Mann–Whitney U,15046.5,< .001,r_rb = -0.60
+Stress (1–5),mean ± SD,2.96 ± 1.41,4.09 ± 1.09,Mann–Whitney U,54768.0,< .001,r_rb = 0.45
+Parent education,College,457 (40.0%),35 (53.0%),χ²,4.91,0.179,Cramér's V = 0.06
+,High school,392 (34.3%),20 (30.3%),,,,
+,No formal,113 (9.9%),4 (6.1%),,,,
+,Postgrad,180 (15.8%),7 (10.6%),,,,
+Income range,High,234 (20.5%),10 (15.2%),χ²,2.41,0.299,Cramér's V = 0.04
+,Low,307 (26.9%),23 (34.8%),,,,
+,Medium,601 (52.6%),33 (50.0%),,,,
+Gender,Female,591 (51.8%),34 (51.5%),χ²,0.43,0.808,Cramér's V = 0.02
+,Male,501 (43.9%),28 (42.4%),,,,
+,Prefer not to say,50 (4.4%),4 (6.1%),,,,
+Difficult subject,English,160 (14.0%),10 (15.2%),χ²,2.68,0.750,Cramér's V = 0.05
+,Geography,89 (7.8%),7 (10.6%),,,,
+,History,115 (10.1%),5 (7.6%),,,,
+,Math,359 (31.4%),16 (24.2%),,,,
+,Science,303 (26.5%),20 (30.3%),,,,
+,Unknown,116 (10.2%),8 (12.1%),,,,
+Study space,No,324 (28.4%),16 (24.2%),χ²,0.34,0.559,Cramér's V = 0.02
+,Yes,818 (71.6%),50 (75.8%),,,,
+Extracurricular,No,338 (29.6%),17 (25.8%),χ²,0.28,0.598,Cramér's V = 0.02
+,Yes,804 (70.4%),49 (74.2%),,,,
+High attendance,No,96 (8.4%),11 (16.7%),χ²,4.3,0.038,Cramér's V = 0.06
+,Yes,1046 (91.6%),55 (83.3%),,,,

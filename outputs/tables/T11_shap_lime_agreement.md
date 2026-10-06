@@ -1,0 +1,13 @@
+**SHAP–LIME rank agreement (50 test students, stratified).**
+
+| Agreement measure                      | Result          |
+|:---------------------------------------|:----------------|
+| Mean Kendall's τ (± SD)                | 0.6041 ± 0.1369 |
+| Median Kendall's τ                     | 0.6154          |
+| Top-1 feature agreement                | 46.0%           |
+| Mean top-3 overlap                     | 66.7%           |
+| Mean top-5 overlap                     | 75.2%           |
+| Instances with significant τ (p < .05) | 92.0%           |
+| Mean sign agreement (top-5)            | 94.4%           |
+| τ — At-Risk students                   | 0.6410 (n = 20) |
+| τ — Not At-Risk students               | 0.5795 (n = 30) |

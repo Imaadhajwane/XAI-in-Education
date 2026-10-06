@@ -1,0 +1,26 @@
+\begin{table}
+\small[htbp]
+\caption{Pairwise DeLong tests of hold-out ROC-AUC.}
+\label{tab:A03_delong}
+\begin{tabular}{llrrrrrl}
+\toprule
+Model A & Model B & AUC (A) & AUC (B) & Z & p & p (BH-FDR) & Sig. (FDR α=.05) \\
+\midrule
+Logistic Regression & SVM & 0.983200 & 0.983500 & -0.072300 & 0.942400 & 0.942400 & ✗ \\
+Logistic Regression & Random Forest & 0.983200 & 0.967200 & 2.513700 & 0.011900 & 0.113300 & ✗ \\
+Logistic Regression & Decision Tree & 0.983200 & 0.908900 & 2.243800 & 0.024800 & 0.113300 & ✗ \\
+Logistic Regression & Gradient Boosting & 0.983200 & 0.980300 & 0.677300 & 0.498200 & 0.587100 & ✗ \\
+Logistic Regression & XGBoost & 0.983200 & 0.977700 & 0.929300 & 0.352700 & 0.481000 & ✗ \\
+SVM & Random Forest & 0.983500 & 0.967200 & 1.874700 & 0.060800 & 0.114100 & ✗ \\
+SVM & Decision Tree & 0.983500 & 0.908900 & 2.096100 & 0.036100 & 0.113300 & ✗ \\
+SVM & Gradient Boosting & 0.983500 & 0.980300 & 0.657000 & 0.511200 & 0.587100 & ✗ \\
+SVM & XGBoost & 0.983500 & 0.977700 & 1.029400 & 0.303300 & 0.454900 & ✗ \\
+Random Forest & Decision Tree & 0.967200 & 0.908900 & 1.888400 & 0.059000 & 0.114100 & ✗ \\
+Random Forest & Gradient Boosting & 0.967200 & 0.980300 & -2.012300 & 0.044200 & 0.113300 & ✗ \\
+Random Forest & XGBoost & 0.967200 & 0.977700 & -1.283500 & 0.199300 & 0.332200 & ✗ \\
+Decision Tree & Gradient Boosting & 0.908900 & 0.980300 & -2.085400 & 0.037000 & 0.113300 & ✗ \\
+Decision Tree & XGBoost & 0.908900 & 0.977700 & -2.001500 & 0.045300 & 0.113300 & ✗ \\
+Gradient Boosting & XGBoost & 0.980300 & 0.977700 & 0.600800 & 0.548000 & 0.587100 & ✗ \\
+\bottomrule
+\end{tabular}
+\end{table}

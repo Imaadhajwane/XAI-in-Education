@@ -1,0 +1,302 @@
+{
+  "T04_class_distribution": {
+    "caption": "Class distribution of the binary target (At-Risk = LastTermPercentage \u2264 50%).",
+    "note": "",
+    "index": false
+  },
+  "S01_data_audit": {
+    "caption": "Variable-level audit of the primary dataset (before cleaning).",
+    "note": "DifficultSubject has missing responses; these are coded as an explicit 'Unknown' level.",
+    "index": false
+  },
+  "S02_descriptives_by_class": {
+    "caption": "Descriptive statistics of the 13 predictors by outcome class.",
+    "note": "Continuous / Likert: Mann\u2013Whitney U with rank-biserial r. Categorical: \u03c7\u00b2 (Fisher exact for sparse 2\u00d72) with Cram\u00e9r's V.",
+    "index": false
+  },
+  "S03_vif": {
+    "caption": "Variance inflation factors of the 13 predictors.",
+    "note": "All VIF < 5 indicates no problematic multicollinearity.",
+    "index": false
+  },
+  "T05_smote_distribution": {
+    "caption": "Class distribution of the training partition before and after SMOTE-NC.",
+    "note": "Held-out test set (n = 363, 20 At-Risk) is never resampled. Inside cross-validation SMOTE-NC is re-fitted on each training fold only. Primary analysis uses: No resampling (justified in Table S5); SMOTE-NC is a sensitivity analysis.",
+    "index": false
+  },
+  "S04_hyperparameters": {
+    "caption": "Hyper-parameters selected by stratified 10-fold GridSearchCV on the training partition.",
+    "note": "Optimisation criterion: average_precision (PR-AUC), appropriate for a 5.5% minority class.",
+    "index": false
+  },
+  "T06_model_comparison": {
+    "caption": "Model comparison: stratified 10-fold CV on the training partition (mean \u00b1 SD) and held-out test performance with stratified bootstrap 95% CIs.",
+    "note": "CV columns: 10 folds of the training partition (n = 845). Test columns: n = 363 (20 At-Risk), 2000 stratified bootstrap replicates, percentile intervals. Threshold = 0.5.",
+    "index": false
+  },
+  "T07_classwise": {
+    "caption": "Class-wise precision, recall and F1 for both classes.",
+    "note": "'(%)' columns: mean \u00b1 SD over 10 CV folds of the training partition. 'Test' columns: single evaluation on the held-out set; support = number of test students per class.",
+    "index": false
+  },
+  "T08_lr_vs_xgb": {
+    "caption": "Logistic Regression vs XGBoost on 10-fold CV scores: Welch's t-test and the Nadeau\u2013Bengio corrected resampled t-test.",
+    "note": "CV folds share training data, so Welch's t-test (which assumes independence) is anti-conservative; the corrected resampled t-test should be used for inference.",
+    "index": false
+  },
+  "T09_kappa_brier": {
+    "caption": "Reliability of the six classifiers: Cohen's \u03ba, MCC and Brier score on the held-out test set.",
+    "note": "Agreement levels follow Landis & Koch (1977). Brier skill score > 0 means better than always predicting the base rate.",
+    "index": false
+  },
+  "A01_mcnemar": {
+    "caption": "Pairwise McNemar tests on hold-out hard predictions.",
+    "note": "Exact binomial test when b + c < 25, otherwise continuity-corrected \u03c7\u00b2. p-values adjusted for 15 comparisons with Benjamini\u2013Hochberg.",
+    "index": false
+  },
+  "A02_friedman": {
+    "caption": "Friedman test on fold-wise accuracy ranks (10 folds, six models).",
+    "note": "Models whose mean ranks differ by more than the critical difference (CD) differ significantly (Nemenyi post-hoc).",
+    "index": false
+  },
+  "A02b_nemenyi": {
+    "caption": "Nemenyi post-hoc p-values (fold-wise accuracy).",
+    "note": "",
+    "index": false
+  },
+  "A03_delong": {
+    "caption": "Pairwise DeLong tests of hold-out ROC-AUC.",
+    "note": "Two-sided; Benjamini\u2013Hochberg adjustment over 15 comparisons.",
+    "index": false
+  },
+  "S06_global_importance": {
+    "caption": "Global feature importance of the final model: mean |SHAP|, permutation importance and standardised coefficients.",
+    "note": "Spearman \u03c1(SHAP, PFI) = 0.747; \u03c1(SHAP, |std. coef|) = 0.962. PFI: mean drop in test ROC-AUC over permutations. Odds ratios: per +1 SD increase (binary/ordinal features: per SD of their code); nominal features: one OR per one-hot level vs. the intercept.",
+    "index": false
+  },
+  "T10_shap_stability": {
+    "caption": "Rank stability of global SHAP importance across 10 random seeds (re-split + re-fit).",
+    "note": "",
+    "index": false
+  },
+  "A04_shap_stability_matrix": {
+    "caption": "Pairwise Spearman correlations of global SHAP rankings across 10 seeds.",
+    "note": "",
+    "index": false
+  },
+  "A05_shap_lime_instances": {
+    "caption": "Instance-level SHAP\u2013LIME agreement (50 test students: all true At-Risk + random Not At-Risk).",
+    "note": "\u03c4 computed over all 13 features on absolute attributions. Sign agreement: share of SHAP top-5 features where LIME weight has the same sign (LIME weights are on the probability scale, SHAP on log-odds).",
+    "index": false
+  },
+  "T11_shap_lime_agreement": {
+    "caption": "SHAP\u2013LIME rank agreement (50 test students, stratified).",
+    "note": "",
+    "index": false
+  },
+  "T01_prex_dimensions": {
+    "caption": "Theoretical grounding of the PREX-Edu pedagogical dimensions.",
+    "note": "Socio-demographic features (age, gender, parent education, income, study space, extracurricular, difficult subject) are retained in the model but form a separate, non-actionable context block.",
+    "index": false
+  },
+  "T12_faithfulness_ablation": {
+    "caption": "Faithfulness ablation: performance drop when features are removed in PREX-Edu order vs random order.",
+    "note": "Removal = replacement by the training mean (numeric) or mode (categorical). Baseline on the test set (n = 363): ROC-AUC = 0.9832, accuracy = 0.9697. Random: 100 random orders. Area under the degradation curve (ROC-AUC): PREX = 0.5727, SHAP order = 0.5595, random = 0.8118 (lower = more faithful). Accuracy is reported for continuity but is uninformative at 5.5% prevalence; ROC-AUC is the primary faithfulness metric.",
+    "index": false
+  },
+  "S07_instance_aopc": {
+    "caption": "Instance-level faithfulness: area over the perturbation curve (AOPC) for students flagged At-Risk.",
+    "note": "Flagged = P(At-Risk) \u2265 0.339 (F1-optimal threshold from training-set CV). AOPC@6 = mean drop in P(At-Risk) over the first six removals; higher = removed features mattered more. Wilcoxon PREX vs random: W = 0.0, p = 9.54e-07; PREX vs SHAP: W = 51.0, p = 0.024. SHAP order is the per-instance upper bound; PREX-Edu constrains removal to whole dimensions.",
+    "index": false
+  },
+  "S08_dimension_ablation": {
+    "caption": "Dimension-level ablation: does the R_k ranking predict the performance cost of removing a dimension?",
+    "note": "R_k = sum of |SHAP| (operator set in config). Spearman \u03c1(mean R_k, \u0394ROC-AUC) = 0.800. Context block shown for completeness.",
+    "index": false
+  },
+  "A06a_aggregation_summary": {
+    "caption": "Sensitivity of dimension rankings to the aggregation operator: sum vs cardinality-normalised mean.",
+    "note": "",
+    "index": false
+  },
+  "A06b_dimension_scores": {
+    "caption": "Mean dimension scores under sum and cardinality-normalised (mean) aggregation.",
+    "note": "",
+    "index": false
+  },
+  "A08_per_student_prex": {
+    "caption": "Per-student PREX-Edu risk magnitudes for the 10 flagged test students with the highest predicted risk.",
+    "note": "Student ID = row number in the original dataset. Margin = dominant minus second-ranked R_k; a larger margin indicates a clearer single intervention target.",
+    "index": false
+  },
+  "S09_dominant_distribution": {
+    "caption": "Distribution of the dominant PREX-Edu dimension and attribution coverage.",
+    "note": "Coverage = share of a student's total |SHAP| captured by the four actionable dimensions; the remainder belongs to non-actionable context features.",
+    "index": false
+  },
+  "T13_demographic_parity": {
+    "caption": "Demographic parity of At-Risk predictions by gender and family income (hold-out test set).",
+    "note": "P(\u0177=1 | group) is the share of the subgroup flagged At-Risk (threshold 0.339, F1-optimal on training CV). Disparate-impact ratio < 0.8 or > 1.25 would breach the four-fifths rule. With \u2264 20 true At-Risk students in the test set, subgroup TPRs are highly uncertain; see script 14 for the full-sample audit with CIs.",
+    "index": false
+  },
+  "A07a_shap_by_gender": {
+    "caption": "Mean absolute SHAP value of the six most important features by gender.",
+    "note": "Last row: Kruskal\u2013Wallis test of equal |SHAP| distributions across subgroups (no multiplicity correction).",
+    "index": false
+  },
+  "A07b_shap_by_income": {
+    "caption": "Mean absolute SHAP value of the six most important features by income range.",
+    "note": "Last row: Kruskal\u2013Wallis test of equal |SHAP| distributions across subgroups (no multiplicity correction).",
+    "index": false
+  },
+  "S10_prex_by_subgroup": {
+    "caption": "Distribution of the dominant PREX-Edu dimension by demographic subgroup (test set).",
+    "note": "\u03c7\u00b2 test of independence between subgroup and dominant dimension. Non-significant p indicates that the pedagogical explanation a teacher receives does not systematically depend on the student's demographics.",
+    "index": false
+  },
+  "S12_intervention_per_student": {
+    "caption": "Simulated intervention effect per dimension for each flagged At-Risk test student.",
+    "note": "\u0394P = reduction in predicted At-Risk probability after improving only that dimension's features.",
+    "index": false
+  },
+  "S11_intervention_simulation": {
+    "caption": "Intervention simulation: does acting on the top-ranked PREX-Edu dimension produce the largest risk reduction?",
+    "note": "Full dose: each feature of the targeted dimension improves by 1 SD, so two-feature dimensions receive twice the total effort. Equal budget: every dimension receives the same total effort (1 SD-unit split across its features). Ranks 1\u20134 and the random comparison use the PREX-Edu operator set in config. This is a computational coherence check, not a causal estimate.",
+    "index": false
+  },
+  "S13_counterfactual_summary": {
+    "caption": "Actionable counterfactual explanations for flagged At-Risk students (greedy minimal-cost search).",
+    "note": "Target: P(At-Risk) below the decision threshold 0.339. Only the six actionable features may change; demographics are immutable. Step sizes: 0.25 SD for continuous features, 1 point for Likert items, Yes for attendance. Cost = sum of standardised step sizes.",
+    "index": false
+  },
+  "S14_counterfactual_examples": {
+    "caption": "Counterfactual examples (first 10 flagged At-Risk test students).",
+    "note": "\u0394 columns: change required in each actionable feature to bring predicted risk below 0.339.",
+    "index": false
+  },
+  "S05_imbalance_strategies": {
+    "caption": "Comparison of class-imbalance strategies (5\u00d710 repeated stratified CV, all 1,208 students).",
+    "note": "Resamplers are fitted inside each training fold only. Threshold = 0.5. ECE = expected calibration error on pooled out-of-fold probabilities (10 quantile bins), mean \u00b1 SD over repeats. Ranking metrics (ROC/PR-AUC) are threshold-free; recall/F1 depend on the 0.5 threshold.",
+    "index": false
+  },
+  "S15_power_wilcoxon": {
+    "caption": "Monte-Carlo power of the paired Wilcoxon signed-rank test (\u03b1 = .05, two-sided) on 1\u20135 Likert ratings.",
+    "note": "Minimum pairs for 80% power: d_z=0.4: 80; d_z=0.5: 40; d_z=0.6: 30; d_z=0.8: 20. 2000 simulations per cell.",
+    "index": false
+  },
+  "S16_power_designs": {
+    "caption": "Power of candidate replication designs when ratings are clustered within raters (ICC = 0.2).",
+    "note": "The 3 \u00d7 5 pilot had \u2248 41% power for a medium effect (d_z = 0.5); \u2265 10 raters \u00d7 10 profiles gives \u2265 80% power for d_z = 0.4.",
+    "index": false
+  },
+  "T02_shap_lime_vs_prex": {
+    "caption": "Criterion-based comparison of SHAP/LIME and PREX-Edu.",
+    "note": "",
+    "index": false
+  },
+  "T03_xai_techniques": {
+    "caption": "Comparative analysis of XAI techniques.",
+    "note": "",
+    "index": false
+  },
+  "S17_xai_rubric": {
+    "caption": "Literature-based rubric scores (0\u201310) underlying Figure 2.",
+    "note": "Composite = arithmetic mean of the six dimensions (Eq. 4).",
+    "index": false
+  },
+  "S18_synthetic_fidelity_privacy": {
+    "caption": "Fidelity, privacy and utility of synthetic data generated from the training partition.",
+    "note": "Generators fitted per class on the hold-out training partition (n = 845). Fidelity: SDMetrics quality scores (1 = perfect), mean absolute difference of Spearman correlation matrices, and a 5-fold XGBoost discriminator (AUC 0.5 = synthetic indistinguishable from real). Privacy: Gower distance to the closest real training record (DCR); reference = real hold-out students (5th percentile = 0.0462). A synthetic set is privacy-safe when its DCR distribution is not shifted below the reference. Utility: train on synthetic, test on real (TSTR) vs train-real-test-real ROC-AUC = 0.9669. SMOTE-NC row refers to its interpolated minority records only.",
+    "index": false
+  },
+  "S19_augmentation_utility": {
+    "caption": "Does synthetic augmentation improve At-Risk detection? (2\u00d75-fold repeated CV, evaluation on real students only)",
+    "note": "Generators are fitted on the training fold only; synthetic rows never enter a test fold. \u0394 = mean paired difference vs real-data-only training; p from the Nadeau\u2013Bengio corrected resampled t-test.",
+    "index": false
+  },
+  "S24_aggregation_operators": {
+    "caption": "Empirical comparison of SHAP-to-dimension aggregation operators against three model-based ground truths.",
+    "note": "Students = test students flagged At-Risk by the final model (p \u2265 0.339). G1: exact baseline Shapley value of each dimension treated as a single player (5 players incl. context; 32 coalitions; log-odds; reference = training mean/mode). G2: change in log-odds when the dimension is reset to the reference. G3: reduction in P(At-Risk) for an equal 1-SD-unit improvement budget per dimension. The operator with the highest agreement should be adopted as the PREX-Edu aggregation rule (or reported as a sensitivity analysis).",
+    "index": false
+  },
+  "S26_threshold_sensitivity": {
+    "caption": "Sensitivity of discrimination and explanations to the At-Risk threshold \u03c4.",
+    "note": "5\u00d710 repeated stratified CV (hyper-parameters fixed at the \u03c4 = 50 selection). PR-AUC lift = PR-AUC / prevalence (random classifier = 1). Explanations from the hold-out LR model at each \u03c4.",
+    "index": false
+  },
+  "S25_crossmodel_prex": {
+    "caption": "Robustness of PREX-Edu explanations to the choice of predictive model.",
+    "note": "Same 363 test students. High agreement means the pedagogical message does not hinge on the classifier.",
+    "index": false
+  },
+  "A09_survey_instrument": {
+    "caption": "Educator survey instrument (administered per profile and format).",
+    "note": "Blinded within-subjects design: each educator rates every profile in both formats (raw SHAP, PREX-Edu) in a randomised order; consent obtained; responses anonymous.",
+    "index": false
+  },
+  "P01_nested_cv_performance": {
+    "caption": "Primary evaluation: nested 10\u00d710-fold repeated stratified cross-validation on all 1208 students (66 At-Risk).",
+    "note": "'mean \u00b1 SD' over 100 outer test folds. 'pooled [95% CI]': metric on the per-student out-of-fold probability averaged over repeats (n = 1208), stratified bootstrap (2000 replicates). Hyper-parameters tuned by inner 5-fold GridSearchCV (PR-AUC); tuned threshold maximises F1 on inner out-of-fold predictions. Imbalance handling: No resampling inside training folds only.",
+    "index": false
+  },
+  "P02_nested_cv_classwise": {
+    "caption": "Class-wise performance under nested repeated cross-validation.",
+    "note": "Mean \u00b1 SD over outer folds. Support = number of students of that class, each scored once per repeat.",
+    "index": false
+  },
+  "P03_corrected_ttests": {
+    "caption": "Pairwise model comparison with the Nadeau\u2013Bengio corrected repeated-CV t-test.",
+    "note": "Corrects for the overlap of training sets across CV folds (variance inflated by 1/J + n_test/n_train). Benjamini\u2013Hochberg adjustment within each metric (15 comparisons).",
+    "index": false
+  },
+  "P04b_nemenyi_roc_auc": {
+    "caption": "Nemenyi post-hoc p-values (ROC-AUC).",
+    "note": "",
+    "index": false
+  },
+  "P04b_nemenyi_pr_auc": {
+    "caption": "Nemenyi post-hoc p-values (PR-AUC (Avg. precision)).",
+    "note": "",
+    "index": false
+  },
+  "P04_friedman_nemenyi": {
+    "caption": "Friedman test with Nemenyi post-hoc over 100 outer folds.",
+    "note": "",
+    "index": false
+  },
+  "P05_delong_oof": {
+    "caption": "DeLong tests on per-student out-of-fold probabilities (n = 1208).",
+    "note": "Benjamini\u2013Hochberg adjustment over 15 comparisons.",
+    "index": false
+  },
+  "P06_mcnemar_oof": {
+    "caption": "McNemar tests on per-student out-of-fold predictions (n = 1208, threshold 0.5).",
+    "note": "Benjamini\u2013Hochberg adjustment over 15 comparisons.",
+    "index": false
+  },
+  "P07_param_frequency": {
+    "caption": "Most frequently selected hyper-parameters across outer folds (top 3 per model).",
+    "note": "",
+    "index": false
+  },
+  "S20_calibration": {
+    "caption": "Calibration of out-of-fold predicted probabilities (nested repeated CV, n = 1,208).",
+    "note": "Slope < 1 indicates over-confident (too extreme) probabilities; intercept \u2260 0 indicates systematic over/under-estimation (calibration-in-the-large).",
+    "index": false
+  },
+  "S21_operating_points": {
+    "caption": "Operating points: thresholds needed to reach target sensitivity, and the resulting workload.",
+    "note": "Computed on out-of-fold probabilities for all 1,208 students (66 At-Risk). 'Flagged per true At-Risk' is the number of students a school must follow up per correctly identified At-Risk student. Note these thresholds are chosen post hoc on the pooled OOF predictions \u2014 use for planning, not as unbiased estimates.",
+    "index": false
+  },
+  "S22_fairness_subgroups": {
+    "caption": "Subgroup performance of the final model on out-of-fold predictions for all 1208 students.",
+    "note": "Threshold = 0.378 (median inner-CV F1-optimal threshold). Values: point estimate [stratified bootstrap 95% CI, 2000 replicates]. Calibration-in-the-large = mean predicted \u2212 observed prevalence.",
+    "index": false
+  },
+  "S23_fairness_gaps": {
+    "caption": "Fairness gaps relative to the reference subgroup (first level of each attribute).",
+    "note": "* = 95% CI excludes 0. Disparate-impact ratio outside [0.8, 1.25] breaches the four-fifths rule. Small subgroups (e.g., 'Prefer not to say', n = 54) produce wide intervals; absence of significance is not evidence of fairness.",
+    "index": false
+  }
+}

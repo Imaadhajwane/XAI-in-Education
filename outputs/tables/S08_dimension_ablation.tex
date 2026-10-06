@@ -1,0 +1,16 @@
+\begin{table}
+\small[htbp]
+\caption{Dimension-level ablation: does the R_k ranking predict the performance cost of removing a dimension?}
+\label{tab:S08_dimension_ablation}
+\begin{tabular}{lrrrrrrr}
+\toprule
+Dimension & Features & Mean R\_k & Mean |SHAP| per feature (Eq. 3 variant) & ROC-AUC after removal & ΔROC-AUC & Rank by R\_k & Rank by ΔAUC \\
+\midrule
+Engagement & 2 & 4.001500 & 2.000800 & 0.784000 & 0.199300 & 1 & 1 \\
+Lifestyle & 2 & 1.583700 & 0.791900 & 0.971400 & 0.011800 & 2 & 3 \\
+Cognitive Load & 1 & 1.493200 & 1.493200 & 0.951300 & 0.031900 & 3 & 2 \\
+Participation & 1 & 0.431800 & 0.431800 & 0.978400 & 0.004800 & 5 & 4 \\
+Context (non-actionable) & 7 & 1.198300 & 0.171200 & 0.986400 & -0.003200 & 4 & 5 \\
+\bottomrule
+\end{tabular}
+\end{table}

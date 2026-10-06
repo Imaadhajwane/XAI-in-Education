@@ -1,0 +1,28 @@
+\begin{table}
+\small[htbp]
+\caption{Most frequently selected hyper-parameters across outer folds (top 3 per model).}
+\label{tab:P07_param_frequency}
+\begin{tabular}{llrr}
+\toprule
+Model & Selected hyper-parameters & Outer folds & Share of outer folds (\%) \\
+\midrule
+Decision Tree & \{'clf\_\_max\_depth': 7, 'clf\_\_min\_samples\_leaf': 10\} & 32 & 32.000000 \\
+Decision Tree & \{'clf\_\_max\_depth': 5, 'clf\_\_min\_samples\_leaf': 5\} & 22 & 22.000000 \\
+Decision Tree & \{'clf\_\_max\_depth': 5, 'clf\_\_min\_samples\_leaf': 10\} & 16 & 16.000000 \\
+Gradient Boosting & \{'clf\_\_learning\_rate': 0.05, 'clf\_\_max\_depth': 2, 'clf\_\_n\_estimators': 200\} & 38 & 38.000000 \\
+Gradient Boosting & \{'clf\_\_learning\_rate': 0.1, 'clf\_\_max\_depth': 2, 'clf\_\_n\_estimators': 100\} & 30 & 30.000000 \\
+Gradient Boosting & \{'clf\_\_learning\_rate': 0.05, 'clf\_\_max\_depth': 3, 'clf\_\_n\_estimators': 200\} & 9 & 9.000000 \\
+Logistic Regression & \{'clf\_\_C': 100\} & 83 & 83.000000 \\
+Logistic Regression & \{'clf\_\_C': 10\} & 17 & 17.000000 \\
+Random Forest & \{'clf\_\_max\_depth': None, 'clf\_\_min\_samples\_leaf': 5\} & 36 & 36.000000 \\
+Random Forest & \{'clf\_\_max\_depth': 10, 'clf\_\_min\_samples\_leaf': 5\} & 35 & 35.000000 \\
+Random Forest & \{'clf\_\_max\_depth': 10, 'clf\_\_min\_samples\_leaf': 1\} & 15 & 15.000000 \\
+SVM & \{'clf\_\_C': 10, 'clf\_\_gamma': 0.01\} & 44 & 44.000000 \\
+SVM & \{'clf\_\_C': 1, 'clf\_\_gamma': 0.01\} & 28 & 28.000000 \\
+SVM & \{'clf\_\_C': 0.1, 'clf\_\_gamma': 0.01\} & 27 & 27.000000 \\
+XGBoost & \{'clf\_\_learning\_rate': 0.05, 'clf\_\_max\_depth': 3\} & 43 & 43.000000 \\
+XGBoost & \{'clf\_\_learning\_rate': 0.1, 'clf\_\_max\_depth': 3\} & 23 & 23.000000 \\
+XGBoost & \{'clf\_\_learning\_rate': 0.05, 'clf\_\_max\_depth': 5\} & 19 & 19.000000 \\
+\bottomrule
+\end{tabular}
+\end{table}

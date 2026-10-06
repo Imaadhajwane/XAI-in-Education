@@ -1,0 +1,15 @@
+\begin{table}
+\small[htbp]
+\caption{Robustness of PREX-Edu explanations to the choice of predictive model.}
+\label{tab:S25_crossmodel_prex}
+\begin{tabular}{llrrlll}
+\toprule
+Comparison & SHAP output space & Global feature-rank ρ & Mean per-student τ (dimension ranks) & Top-1 dimension agreement (all test) & Top-1 agreement (flagged At-Risk) & Global dimension order \\
+\midrule
+LR (reference) & log-odds & 1.000000 & 1.000000 & 100\% & 100\% & Engagement > Lifestyle > Cognitive Load > Participation \\
+LR vs XGB & log-odds & 0.945000 & 0.629000 & 70.8\% & 81.0\% & Engagement > Lifestyle > Cognitive Load > Participation \\
+LR vs RF & probability & 0.808000 & 0.713000 & 79.3\% & 95.2\% & Engagement > Cognitive Load > Lifestyle > Participation \\
+LR vs GB & log-odds & 0.919000 & 0.757000 & 75.5\% & 100.0\% & Engagement > Cognitive Load > Lifestyle > Participation \\
+\bottomrule
+\end{tabular}
+\end{table}

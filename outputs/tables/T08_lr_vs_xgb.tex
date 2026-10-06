@@ -1,0 +1,15 @@
+\begin{table}
+\small[htbp]
+\caption{Logistic Regression vs XGBoost on 10-fold CV scores: Welch's t-test and the Nadeau–Bengio corrected resampled t-test.}
+\label{tab:T08_lr_vs_xgb}
+\begin{tabular}{lllrrrrrrl}
+\toprule
+Metric & LR mean ± SD & XGB mean ± SD & Welch t & Welch df & Welch p & Corrected t (Nadeau–Bengio) & Corrected p & Cohen's d & Significant (corrected, α=.05) \\
+\midrule
+Accuracy & 0.9539 ± 0.0275 & 0.9574 ± 0.0186 & -0.338000 & 15.800000 & 0.740100 & -0.396000 & 0.701400 & -0.151000 & No \\
+ROC-AUC & 0.9562 ± 0.0326 & 0.9347 ± 0.0538 & 1.079000 & 14.820000 & 0.297800 & 1.420000 & 0.189400 & 0.483000 & No \\
+PR-AUC (Avg. precision) & 0.6527 ± 0.2556 & 0.6127 ± 0.2348 & 0.364000 & 17.870000 & 0.719900 & 0.586000 & 0.572100 & 0.163000 & No \\
+F1 (At-Risk) & 0.4940 ± 0.3162 & 0.4636 ± 0.2549 & 0.237000 & 17.220000 & 0.815300 & 0.282000 & 0.784100 & 0.106000 & No \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,21 @@
+**McNemar tests on per-student out-of-fold predictions (n = 1208, threshold 0.5).**
+
+| Model A             | Model B           |   b (A✓ B✗) |   c (A✗ B✓) |   χ² (cc) | Test    |      p |   p (BH-FDR) | Sig.   |
+|:--------------------|:------------------|------------:|------------:|----------:|:--------|-------:|-------------:|:-------|
+| Logistic Regression | SVM               |           7 |          11 |           | exact   | 0.4807 |       0.6009 | ✗      |
+| Logistic Regression | Random Forest     |          34 |          16 |     5.78  | chi2-cc | 0.0162 |       0.0608 | ✗      |
+| Logistic Regression | Decision Tree     |          22 |          12 |     2.382 | chi2-cc | 0.1227 |       0.2045 | ✗      |
+| Logistic Regression | Gradient Boosting |          15 |           8 |           | exact   | 0.21   |       0.2864 | ✗      |
+| Logistic Regression | XGBoost           |           9 |          12 |           | exact   | 0.6636 |       0.711  | ✗      |
+| SVM                 | Random Forest     |          29 |           7 |    12.25  | chi2-cc | 0.0005 |       0.007  | ✓      |
+| SVM                 | Decision Tree     |          20 |           6 |     6.5   | chi2-cc | 0.0108 |       0.0539 | ✗      |
+| SVM                 | Gradient Boosting |          17 |           6 |           | exact   | 0.0347 |       0.0743 | ✗      |
+| SVM                 | XGBoost           |          11 |          10 |           | exact   | 1      |       1      | ✗      |
+| Random Forest       | Decision Tree     |          11 |          19 |     1.633 | chi2-cc | 0.2012 |       0.2864 | ✗      |
+| Random Forest       | Gradient Boosting |          14 |          25 |     2.564 | chi2-cc | 0.1093 |       0.2045 | ✗      |
+| Random Forest       | XGBoost           |           8 |          29 |    10.811 | chi2-cc | 0.001  |       0.0076 | ✓      |
+| Decision Tree       | Gradient Boosting |           9 |          12 |           | exact   | 0.6636 |       0.711  | ✗      |
+| Decision Tree       | XGBoost           |           8 |          21 |     4.966 | chi2-cc | 0.0259 |       0.0743 | ✗      |
+| Gradient Boosting   | XGBoost           |           4 |          14 |           | exact   | 0.0309 |       0.0743 | ✗      |
+
+*Note.* Benjamini–Hochberg adjustment over 15 comparisons.

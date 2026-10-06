@@ -1,0 +1,22 @@
+**Intervention simulation: does acting on the top-ranked PREX-Edu dimension produce the largest risk reduction?**
+
+| Design                                 | Measure                                         | Value                             |
+|:---------------------------------------|:------------------------------------------------|:----------------------------------|
+| Full dose (1 SD per feature)           | Flagged At-Risk students                        | 21                                |
+| Full dose (1 SD per feature)           | Mean-|SHAP| top = most effective                | 71.4%                             |
+| Full dose (1 SD per feature)           | Sum-|SHAP| top = most effective                 | 100.0%                            |
+| Full dose (1 SD per feature)           | Binomial test vs chance 25% (PREX-Edu operator) | p = 2.27e-13                      |
+| Full dose (1 SD per feature)           | Mean ΔP rank 1 / 2 / 3 / 4                      | 0.5897 / 0.3397 / 0.2649 / 0.1468 |
+| Full dose (1 SD per feature)           | Mean ΔP random dimension                        | 0.3353                            |
+| Full dose (1 SD per feature)           | Wilcoxon rank-1 vs random dimension             | W = 0.0, p = 9.54e-07             |
+| Full dose (1 SD per feature)           | Friedman across ranks 1–4                       | χ² = 43.69, p = 1.76e-09          |
+| Equal budget (1 SD-unit per dimension) | Flagged At-Risk students                        | 21                                |
+| Equal budget (1 SD-unit per dimension) | Mean-|SHAP| top = most effective                | 61.9%                             |
+| Equal budget (1 SD-unit per dimension) | Sum-|SHAP| top = most effective                 | 81.0%                             |
+| Equal budget (1 SD-unit per dimension) | Binomial test vs chance 25% (PREX-Edu operator) | p = 1.19e-07                      |
+| Equal budget (1 SD-unit per dimension) | Mean ΔP rank 1 / 2 / 3 / 4                      | 0.4196 / 0.2721 / 0.1848 / 0.1294 |
+| Equal budget (1 SD-unit per dimension) | Mean ΔP random dimension                        | 0.2515                            |
+| Equal budget (1 SD-unit per dimension) | Wilcoxon rank-1 vs random dimension             | W = 0.0, p = 9.54e-07             |
+| Equal budget (1 SD-unit per dimension) | Friedman across ranks 1–4                       | χ² = 35.00, p = 1.22e-07          |
+
+*Note.* Full dose: each feature of the targeted dimension improves by 1 SD, so two-feature dimensions receive twice the total effort. Equal budget: every dimension receives the same total effort (1 SD-unit split across its features). Ranks 1–4 and the random comparison use the PREX-Edu operator set in config. This is a computational coherence check, not a causal estimate.

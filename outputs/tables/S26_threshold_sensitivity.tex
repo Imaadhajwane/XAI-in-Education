@@ -1,0 +1,16 @@
+\begin{table}
+\small[htbp]
+\caption{Sensitivity of discrimination and explanations to the At-Risk threshold τ.}
+\label{tab:S26_threshold_sensitivity}
+\begin{tabular}{rrlllrllrllr}
+\toprule
+τ (last-term \% ≤) & At-Risk n & Prevalence & LR ROC-AUC & LR PR-AUC & LR PR-AUC lift & XGB ROC-AUC & XGB PR-AUC & XGB PR-AUC lift & Top-3 SHAP features & Dominant dimension (top-risk students) & Global SHAP rank ρ vs τ=50 \\
+\midrule
+40 & 8 & 0.7\% & 0.940 ± 0.088 & 0.484 ± 0.433 & 73.000000 & 0.966 ± 0.068 & 0.610 ± 0.383 & 92.200000 & Motivation (1–5), Stress (1–5), High attendance & Participation 100\% & 0.346000 \\
+45 & 25 & 2.1\% & 0.949 ± 0.055 & 0.496 ± 0.253 & 23.900000 & 0.955 ± 0.039 & 0.476 ± 0.256 & 23.000000 & Motivation (1–5), Study hours / week, Stress (1–5) & Engagement 100\% & 0.769000 \\
+50 & 66 & 5.5\% & 0.966 ± 0.020 & 0.716 ± 0.148 & 13.100000 & 0.950 ± 0.033 & 0.663 ± 0.147 & 12.100000 & Motivation (1–5), Study hours / week, Stress (1–5) & Engagement 100\% & 1.000000 \\
+55 & 172 & 14.2\% & 0.957 ± 0.017 & 0.789 ± 0.081 & 5.500000 & 0.939 ± 0.022 & 0.734 ± 0.088 & 5.200000 & Motivation (1–5), Stress (1–5), Study hours / week & Engagement 65\%; Participation 21\%; Cognitive Load 13\% & 0.720000 \\
+60 & 311 & 25.7\% & 0.947 ± 0.020 & 0.872 ± 0.046 & 3.400000 & 0.925 ± 0.028 & 0.823 ± 0.058 & 3.200000 & Motivation (1–5), Study hours / week, Stress (1–5) & Engagement 71\%; Cognitive Load 19\%; Participation 7\%; Lifestyle 2\% & 0.868000 \\
+\bottomrule
+\end{tabular}
+\end{table}

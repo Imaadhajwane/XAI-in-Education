@@ -1,0 +1,26 @@
+\begin{table}
+\small[htbp]
+\caption{McNemar tests on per-student out-of-fold predictions (n = 1208, threshold 0.5).}
+\label{tab:P06_mcnemar_oof}
+\begin{tabular}{llrrllrrl}
+\toprule
+Model A & Model B & b (A✓ B✗) & c (A✗ B✓) & χ² (cc) & Test & p & p (BH-FDR) & Sig. \\
+\midrule
+Logistic Regression & SVM & 7 & 11 &  & exact & 0.480700 & 0.600900 & ✗ \\
+Logistic Regression & Random Forest & 34 & 16 & 5.780000 & chi2-cc & 0.016200 & 0.060800 & ✗ \\
+Logistic Regression & Decision Tree & 22 & 12 & 2.382000 & chi2-cc & 0.122700 & 0.204500 & ✗ \\
+Logistic Regression & Gradient Boosting & 15 & 8 &  & exact & 0.210000 & 0.286400 & ✗ \\
+Logistic Regression & XGBoost & 9 & 12 &  & exact & 0.663600 & 0.711000 & ✗ \\
+SVM & Random Forest & 29 & 7 & 12.250000 & chi2-cc & 0.000500 & 0.007000 & ✓ \\
+SVM & Decision Tree & 20 & 6 & 6.500000 & chi2-cc & 0.010800 & 0.053900 & ✗ \\
+SVM & Gradient Boosting & 17 & 6 &  & exact & 0.034700 & 0.074300 & ✗ \\
+SVM & XGBoost & 11 & 10 &  & exact & 1.000000 & 1.000000 & ✗ \\
+Random Forest & Decision Tree & 11 & 19 & 1.633000 & chi2-cc & 0.201200 & 0.286400 & ✗ \\
+Random Forest & Gradient Boosting & 14 & 25 & 2.564000 & chi2-cc & 0.109300 & 0.204500 & ✗ \\
+Random Forest & XGBoost & 8 & 29 & 10.811000 & chi2-cc & 0.001000 & 0.007600 & ✓ \\
+Decision Tree & Gradient Boosting & 9 & 12 &  & exact & 0.663600 & 0.711000 & ✗ \\
+Decision Tree & XGBoost & 8 & 21 & 4.966000 & chi2-cc & 0.025900 & 0.074300 & ✗ \\
+Gradient Boosting & XGBoost & 4 & 14 &  & exact & 0.030900 & 0.074300 & ✗ \\
+\bottomrule
+\end{tabular}
+\end{table}

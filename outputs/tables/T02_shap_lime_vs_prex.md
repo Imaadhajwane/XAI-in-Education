@@ -1,0 +1,9 @@
+**Criterion-based comparison of SHAP/LIME and PREX-Edu.**
+
+| Criterion                 | SHAP / LIME   | PREX-Edu                                                                                 |
+|:--------------------------|:--------------|:-----------------------------------------------------------------------------------------|
+| Explanation level         | Feature-based | Pedagogical-dimension-based                                                              |
+| Domain awareness          | No            | Yes                                                                                      |
+| Actionability             | Limited       | Designed for high actionability (computationally supported; educator validation pending) |
+| Educator interpretability | Moderate      | Expected strong (pending powered study)                                                  |
+| Ethical transparency      | Implicit      | Explicit (dimension definitions + coverage reported)                                     |

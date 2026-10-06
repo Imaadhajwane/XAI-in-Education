@@ -1,0 +1,56 @@
+\begin{table}
+\small[htbp]
+\caption{Pairwise model comparison with the Nadeau–Bengio corrected repeated-CV t-test.}
+\label{tab:P03_corrected_ttests}
+\begin{tabular}{lllrrrrrl}
+\toprule
+Metric & Model A & Model B & Mean diff (A−B) & t & df & p & p (BH-FDR) & Sig. \\
+\midrule
+ROC-AUC & Logistic Regression & SVM & 0.005200 & 1.698000 & 99 & 0.092600 & 0.115700 & ✗ \\
+ROC-AUC & Logistic Regression & Random Forest & 0.031200 & 3.414000 & 99 & 0.000900 & 0.002300 & ✓ \\
+ROC-AUC & Logistic Regression & Decision Tree & 0.162500 & 5.266000 & 99 & 0.000000 & 0.000000 & ✓ \\
+ROC-AUC & Logistic Regression & Gradient Boosting & 0.024700 & 2.413000 & 99 & 0.017700 & 0.033100 & ✓ \\
+ROC-AUC & Logistic Regression & XGBoost & 0.015600 & 1.808000 & 99 & 0.073600 & 0.100300 & ✗ \\
+ROC-AUC & SVM & Random Forest & 0.026000 & 2.738000 & 99 & 0.007300 & 0.015700 & ✓ \\
+ROC-AUC & SVM & Decision Tree & 0.157300 & 5.145000 & 99 & 0.000000 & 0.000000 & ✓ \\
+ROC-AUC & SVM & Gradient Boosting & 0.019500 & 1.987000 & 99 & 0.049600 & 0.082700 & ✗ \\
+ROC-AUC & SVM & XGBoost & 0.010400 & 1.261000 & 99 & 0.210200 & 0.225300 & ✗ \\
+ROC-AUC & Random Forest & Decision Tree & 0.131300 & 4.575000 & 99 & 0.000000 & 0.000000 & ✓ \\
+ROC-AUC & Random Forest & Gradient Boosting & -0.006500 & -0.796000 & 99 & 0.428100 & 0.428100 & ✗ \\
+ROC-AUC & Random Forest & XGBoost & -0.015600 & -1.879000 & 99 & 0.063200 & 0.094800 & ✗ \\
+ROC-AUC & Decision Tree & Gradient Boosting & -0.137800 & -4.796000 & 99 & 0.000000 & 0.000000 & ✓ \\
+ROC-AUC & Decision Tree & XGBoost & -0.146800 & -5.072000 & 99 & 0.000000 & 0.000000 & ✓ \\
+ROC-AUC & Gradient Boosting & XGBoost & -0.009000 & -1.270000 & 99 & 0.207200 & 0.225300 & ✗ \\
+PR-AUC (Avg. precision) & Logistic Regression & SVM & 0.032700 & 1.769000 & 99 & 0.079900 & 0.109000 & ✗ \\
+PR-AUC (Avg. precision) & Logistic Regression & Random Forest & 0.130200 & 2.954000 & 99 & 0.003900 & 0.008400 & ✓ \\
+PR-AUC (Avg. precision) & Logistic Regression & Decision Tree & 0.335400 & 6.358000 & 99 & 0.000000 & 0.000000 & ✓ \\
+PR-AUC (Avg. precision) & Logistic Regression & Gradient Boosting & 0.113000 & 3.143000 & 99 & 0.002200 & 0.005500 & ✓ \\
+PR-AUC (Avg. precision) & Logistic Regression & XGBoost & 0.065300 & 1.823000 & 99 & 0.071300 & 0.106900 & ✗ \\
+PR-AUC (Avg. precision) & SVM & Random Forest & 0.097500 & 2.246000 & 99 & 0.026900 & 0.050500 & ✗ \\
+PR-AUC (Avg. precision) & SVM & Decision Tree & 0.302700 & 5.611000 & 99 & 0.000000 & 0.000000 & ✓ \\
+PR-AUC (Avg. precision) & SVM & Gradient Boosting & 0.080300 & 2.122000 & 99 & 0.036300 & 0.060500 & ✗ \\
+PR-AUC (Avg. precision) & SVM & XGBoost & 0.032600 & 0.910000 & 99 & 0.365100 & 0.391200 & ✗ \\
+PR-AUC (Avg. precision) & Random Forest & Decision Tree & 0.205200 & 3.892000 & 99 & 0.000200 & 0.000500 & ✓ \\
+PR-AUC (Avg. precision) & Random Forest & Gradient Boosting & -0.017200 & -0.438000 & 99 & 0.662100 & 0.662100 & ✗ \\
+PR-AUC (Avg. precision) & Random Forest & XGBoost & -0.064900 & -1.470000 & 99 & 0.144600 & 0.180800 & ✗ \\
+PR-AUC (Avg. precision) & Decision Tree & Gradient Boosting & -0.222400 & -4.442000 & 99 & 0.000000 & 0.000100 & ✓ \\
+PR-AUC (Avg. precision) & Decision Tree & XGBoost & -0.270100 & -5.071000 & 99 & 0.000000 & 0.000000 & ✓ \\
+PR-AUC (Avg. precision) & Gradient Boosting & XGBoost & -0.047700 & -1.398000 & 99 & 0.165100 & 0.190500 & ✗ \\
+MCC & Logistic Regression & SVM & 0.043500 & 1.008000 & 99 & 0.316000 & 0.364700 & ✗ \\
+MCC & Logistic Regression & Random Forest & 0.554300 & 8.708000 & 99 & 0.000000 & 0.000000 & ✓ \\
+MCC & Logistic Regression & Decision Tree & 0.230600 & 3.115000 & 99 & 0.002400 & 0.006000 & ✓ \\
+MCC & Logistic Regression & Gradient Boosting & 0.125200 & 2.160000 & 99 & 0.033200 & 0.055300 & ✗ \\
+MCC & Logistic Regression & XGBoost & 0.049800 & 0.905000 & 99 & 0.367800 & 0.394100 & ✗ \\
+MCC & SVM & Random Forest & 0.510800 & 7.488000 & 99 & 0.000000 & 0.000000 & ✓ \\
+MCC & SVM & Decision Tree & 0.187100 & 2.321000 & 99 & 0.022400 & 0.047900 & ✓ \\
+MCC & SVM & Gradient Boosting & 0.081700 & 1.374000 & 99 & 0.172600 & 0.215700 & ✗ \\
+MCC & SVM & XGBoost & 0.006300 & 0.098000 & 99 & 0.922500 & 0.922500 & ✗ \\
+MCC & Random Forest & Decision Tree & -0.323700 & -4.302000 & 99 & 0.000000 & 0.000100 & ✓ \\
+MCC & Random Forest & Gradient Boosting & -0.429100 & -6.676000 & 99 & 0.000000 & 0.000000 & ✓ \\
+MCC & Random Forest & XGBoost & -0.504500 & -7.976000 & 99 & 0.000000 & 0.000000 & ✓ \\
+MCC & Decision Tree & Gradient Boosting & -0.105400 & -1.448000 & 99 & 0.150900 & 0.205700 & ✗ \\
+MCC & Decision Tree & XGBoost & -0.180800 & -2.190000 & 99 & 0.030800 & 0.055300 & ✗ \\
+MCC & Gradient Boosting & XGBoost & -0.075400 & -1.457000 & 99 & 0.148300 & 0.205700 & ✗ \\
+\bottomrule
+\end{tabular}
+\end{table}

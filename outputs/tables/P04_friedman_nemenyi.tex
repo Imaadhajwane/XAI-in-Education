@@ -1,0 +1,23 @@
+\begin{table}
+\small[htbp]
+\caption{Friedman test with Nemenyi post-hoc over 100 outer folds.}
+\label{tab:P04_friedman_nemenyi}
+\begin{tabular}{lrlrlll}
+\toprule
+Metric & Rank & Model & Mean rank & Friedman χ² & p & CD (α=.05) \\
+\midrule
+ROC-AUC & 1 & Logistic Regression & 1.735000 & 308.160000 & 1.76e-64 & 0.754000 \\
+ROC-AUC & 2 & SVM & 2.530000 &  &  &  \\
+ROC-AUC & 3 & XGBoost & 2.920000 &  &  &  \\
+ROC-AUC & 4 & Gradient Boosting & 3.660000 &  &  &  \\
+ROC-AUC & 5 & Random Forest & 4.270000 &  &  &  \\
+ROC-AUC & 6 & Decision Tree & 5.885000 &  &  &  \\
+PR-AUC (Avg. precision) & 1 & Logistic Regression & 1.840000 & 262.090000 & 1.40e-54 & 0.754000 \\
+PR-AUC (Avg. precision) & 2 & SVM & 2.640000 &  &  &  \\
+PR-AUC (Avg. precision) & 3 & XGBoost & 2.950000 &  &  &  \\
+PR-AUC (Avg. precision) & 4 & Gradient Boosting & 3.780000 &  &  &  \\
+PR-AUC (Avg. precision) & 5 & Random Forest & 4.060000 &  &  &  \\
+PR-AUC (Avg. precision) & 6 & Decision Tree & 5.730000 &  &  &  \\
+\bottomrule
+\end{tabular}
+\end{table}
