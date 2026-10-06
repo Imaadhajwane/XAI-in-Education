@@ -1,5 +1,7 @@
 # PREX-Edu
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23185848.svg)](https://doi.org/10.5281/zenodo.23185848)
+
 **From feature attributions to pedagogical levers in the early identification of at-risk secondary-school students**
 
 Code, results and a privacy-checked synthetic dataset for the PREX-Edu study (submitted to the *Journal of Educational Data Mining*).
@@ -27,8 +29,8 @@ The synthetic file contains the 13 predictors and the binary `AtRisk` label. It 
 ## Quick start
 
 ```bash
-git clone https://github.com/<user>/PREX-Edu.git
-cd PREX-Edu
+git clone https://github.com/Imaadhajwane/XAI-in-Education.git
+cd XAI-in-Education
 python -m venv .venv
 source .venv/bin/activate          # Windows: .venv\Scripts\activate
 pip install -r requirements.txt    # exact versions: requirements-lock.txt
